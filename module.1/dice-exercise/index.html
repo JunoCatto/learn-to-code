@@ -64,7 +64,10 @@
 
       <label for="dice">Choose your dice:</label>
       <select id="dice">
+        <option value="2">D2</option>
+        <option value="3">D3</option>
         <option value="4">D4</option>
+        <option value="5">D5</option>
         <option value="6" selected>D6</option>
       </select>
 
@@ -74,15 +77,18 @@
     </div>
 
     <script type="module">
+      const rollBtn = document.getElementById("rollBtn");
       const result = document.getElementById("result");
-
       const diceSelect = document.getElementById("dice");
-      console.log(diceSelect.value);
 
       import { rollDice } from "./dice/dice.js";
 
+      rollBtn.addEventListener("click", () => {
+        const sidesChosen = parseInt(diceSelect.value);
+        // parseInt takes a string argument and returns the first integer
+        result.textContent = rollDice(sidesChosen);
+      });
       // 📌 replace the placeholder text with the actual dice roll result
-      result.textContent = "Dice result";
 
       // 📌 wire the roll button to generate a random dice roll
       // when the button is clicked generate random dice roll.

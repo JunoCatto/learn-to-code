@@ -9,7 +9,6 @@ export function rollDice(sides) {
   }
   return Math.floor(Math.random() * sides) + 1;
 }
-
 // Example usage
 console.log(rollDice(6)); // random number 1-6
 console.log(rollDice(20)); // random number 1-20
