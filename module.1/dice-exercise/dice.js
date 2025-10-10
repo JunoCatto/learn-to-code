@@ -10,3 +10,4 @@ export function rollDice(sides) {
   // 📌 Generate random number between 1 and sides
   return Math.floor(Math.random() * sides) + 1;
 }
+// Branch Merge!
