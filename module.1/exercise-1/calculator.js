@@ -40,7 +40,10 @@ class Calculator {
   }
 
   // implement deleteOne
-  deleteOne() {}
+  deleteOne() {
+  if (this.justEvaluated = false) {
+  this.current = this.current.slice(0, -1);}
+  }
 
   setOperator(op) {
     if (this.operator && !this.justEvaluated) {
@@ -67,6 +70,12 @@ class Calculator {
         break;
       case "%":
         result = a % b;
+        break;
+      case "*":
+        result = a * b;
+        break;
+      case "-":
+        result = a - b;
         break;
       default:
         return;

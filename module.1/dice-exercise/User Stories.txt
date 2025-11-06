@@ -1,0 +1,5 @@
+User Stories for a simple dice application.
+
+As a user I want to use this software to roll from a D2 dice to a D6 dice, and the result to be displayed. I want to be able to roll again easily.
+Improvements could be to have a dice that displays the number on the front for more visual feedback also.
+Possible accessibility options could be added, such as reading out the number for the visually impaired.
